@@ -233,6 +233,30 @@ export default function ResultsPage() {
         </div>
       </div>
 
+      {/* Matplotlib Generated Charts */}
+      <div className="card fade-in-3" style={{ marginTop: 32 }}>
+        <div className="section-title" style={{ marginBottom: 4 }}>Python Matplotlib Output Plots</div>
+        <p style={{ color: "#64748b", fontSize: 13, marginBottom: 20 }}>
+          Direct output figures generated and saved by <code>train_model.py</code>
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+          <div style={{ background: "#0d1117", borderRadius: 10, padding: 12, border: "1px solid rgba(255,255,255,0.06)" }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#94a3b8", marginBottom: 8, textAlign: "center" }}>
+              Confusion Matrix Plot
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/confusion_matrix.png" alt="Confusion Matrix Plot" style={{ width: "100%", borderRadius: 8 }} />
+          </div>
+          <div style={{ background: "#0d1117", borderRadius: 10, padding: 12, border: "1px solid rgba(255,255,255,0.06)" }}>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#94a3b8", marginBottom: 8, textAlign: "center" }}>
+              Precision-Recall Curve Plot
+            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/precision_recall_curve.png" alt="Precision Recall Curve Plot" style={{ width: "100%", borderRadius: 8 }} />
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
